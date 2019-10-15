@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 <style>
 
 .button {
-  background-color: #4CAFFF;
-  border: none;
-  color: white;
-  width:50%;
-  padding: 15px 0px;
-  text-align: center;
-  font-size: 30px;
-  
-  outline-style:none;
-  border:1px solid black;
+	background-color: #4CAFFF;
+	border: none;
+	color: white;
+	width:50%;
+	padding: 15px 0px;
+	text-align: center;
+	font-size: 30px;
 
-  position:fixed;
-  bottom : 10%;
-  left : 25%;
-  touch-action: manipulation;
+	outline-style:none;
+	border:1px solid black;
+
+	position:fixed;
+	bottom : 10%;
+	left : 25%;
+
+	/* 
+	Prevent double-tapping on button from zooming page on mobile
+	https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action
+	*/
+	touch-action: none; 
   
 
 }
@@ -36,7 +41,7 @@
 </head>
 <body>
 
-<button class="button" onclick="myFunction()">Generate1</button>
+<button class="button" onclick="myFunction()">Generate2</button>
 
 <p id="demo"></p>
 
