@@ -2,37 +2,23 @@
 <html>
 <head>
 <style>
-.centre {
-
-  width: 50%;
-  text-align: center;
-  border: 1px solid black;
-  position:fixed;
-  bottom : 50%;
-  left : 25%;
-}
-
-.buttoncentre {
-  margin:auto;
-  width: 50%;
-  text-align: center;
-   position:fixed;
-  bottom : 10%;
-  left : 25%;
-
-}
 
 .button {
   background-color: #4CAFFF;
-  margin:auto;
   border: none;
   color: white;
   width:50%;
-  padding: 10px 0px;
+  padding: 15px 0px;
   text-align: center;
-  font-size: 16px;
-  cursor: pointer;
+  font-size: 30px;
+  
   outline-style:none;
+  border:1px solid black;
+
+  position:fixed;
+  bottom : 10%;
+  left : 25%;
+  
 
 }
 
@@ -44,19 +30,21 @@
 }
 
 </style>
+
 </head>
 <body>
 
+<button class="button" onclick="myFunction()">Styled Button</button>
 
+<p id="demo"></p>
 
-<div class = "centre">
-	<p> Centred text </p>
-</div>
+<script>
+var x = 0;
+function myFunction() {
+	x+=1;
+	document.getElementById("demo").innerHTML = "Hello World: " + x;
+}
+</script>
 
-
-<div class = "buttoncentre">
-<button class="button">Styled Button</button>
-</div>
-<button>Default Button</button>
 </body>
 </html>
