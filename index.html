@@ -2,42 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-<style>
-
-.button {
-	background-color: #4CAFFF;
-	border: none;
-	color: white;
-	width:50%;
-	padding: 15px 0px;
-	text-align: center;
-	font-size: 30px;
-
-	outline-style:none;
-	border:1px solid black;
-
-	position:fixed;
-	bottom : 10%;
-	left : 25%;
-
-	/* 
-	Prevent double-tapping on button from zooming page on mobile
-	https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action
-	*/
-	touch-action: manipulation; 
-  
-
-}
-
-.button:hover {
-  background-color: #55CCFF;
-}
-.button:active {
-  background-color: #AAAAFF;
-}
-
-</style>
-
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -45,13 +10,7 @@
 
 <p id="demo"></p>
 
-<script>
-var x = 0;
-function myFunction() {
-	x+=1;
-	document.getElementById("demo").innerHTML = "Hello World: " + x;
-}
-</script>
+<script src="test.js"></script>
 
 </body>
 </html>
