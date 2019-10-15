@@ -1,10 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="styles.css">
+<style>
+.centre {
+
+  width: 50%;
+  text-align: center;
+  border: 1px solid black;
+  position:fixed;
+  bottom : 50%;
+  left : 25%;
+}
+
+.buttoncentre {
+  margin:auto;
+  width: 50%;
+  text-align: center;
+   position:fixed;
+  bottom : 10%;
+  left : 25%;
+
+}
+
+.button {
+  background-color: #4CAFFF;
+  margin:auto;
+  border: none;
+  color: white;
+  width:50%;
+  padding: 10px 0px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  outline-style:none;
+
+}
+
+.button:hover {
+  background-color: #55CCFF;
+}
+.button:active {
+  background-color: #AAAAFF;
+}
+
+</style>
 </head>
 <body>
-	<script src="p5.min.js"></script>
-    <script src="test.js"></script>
+
+
+
+<div class = "centre">
+	<p> Centred text </p>
+</div>
+
+
+<div class = "buttoncentre">
+<button class="button">Styled Button</button>
+</div>
+<button>Default Button</button>
 </body>
 </html>
