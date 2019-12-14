@@ -1,0 +1,68 @@
+ @font-face { font-family: opensans; src: url('Resources/OpenSans-Regular.ttf');}
+
+body {
+	background-color: #222222;
+}
+
+.social {
+	touch-action: manipulation;
+	/* Disable text selection: https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting */
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Chrome, Opera and Firefox */
+}
+
+.prompt {
+	font-family: opensans;
+	color: white;
+	text-align: center;
+	font-size:25px;
+
+	position: fixed;
+	width: 90%;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	/*outline: 2px solid #555555;*/
+}
+
+.button {
+	background-color: #4CAFFF;
+	
+	font-family: opensans;
+	text-align: center;
+	font-size: 25px;
+	padding: 10px 0px;
+	color: white;
+
+	outline-style:none;
+	border:none;
+	cursor:pointer;
+
+	position:fixed;
+	width:50%;
+	bottom : 10%;
+	left : 25%;
+
+	/* Disable text selection: https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting */
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Chrome, Opera and Firefox */
+
+	/* 
+	Prevent double-tapping on button from zooming page on mobile
+	https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action
+	*/
+	touch-action: manipulation; 
+}
+
+.button:hover {
+  background-color: #5dc2f5;
+}
+.button:active {
+  background-color: #5591ff;
+}
