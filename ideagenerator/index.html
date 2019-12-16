@@ -6,8 +6,13 @@
 		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 		<link rel="icon" href="../favicon.ico" type="image/x-icon" />
 		<link rel="stylesheet" href="stylesheet.css">
+		<!-- This is here to speed up loading of the page by deferring the
+			loading of the massive scripts until the page is done. -->
+		<!-- We could put this script in the body to try and save out on 
+			one request but that shouldn't be necessary.-->
 		<script src="data.js"></script>
 		<script src="generator.js"></script>
+		<script src="loader.js"></script>
 	</head>
 	<body>
 		<!-- 'generate' button -->
