@@ -18,9 +18,14 @@ let parsed = false;
 function generate() {
 	if(!parsed)
 		parseCategories();
-	reset();
-	let template = pickRandom('template');
-	let result = fillInTemplate(template);
+	let result;
+	do
+	{
+		reset();
+		let template = pickRandom('template');
+		//Temporary fix for 'result' sometimes being null
+		result = fillInTemplate(template);
+	}while(typeof result === 'undefined' || result.length === 0);
 	result = formatOutput(result);
 	document.getElementById("content").innerHTML = result;
 }
