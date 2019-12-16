@@ -15,9 +15,15 @@
 		<script src="loader.js"></script>
 	</head>
 	<body>
-		<!-- 'generate' button -->
-		<button class="button" onclick="generate()">Generate Idea</button>
-
+			<!-- 'generate' button -->
+			<button class="button" onclick="generate()">Generate Idea</button>
+	
+			<!-- Play thoughtful music -->
+			<!-- https://www.youtube.com/watch?v=I6wFBVk4uGQ -->
+			<div class = "audio-player" data-video="I6wFBVk4uGQ" data-autoplay="1" data-loop="1" id="youtube-audio"></div>
+			<script src="https://www.youtube.com/iframe_api"></script>
+			<script src="https://cdn.rawgit.com/labnol/files/master/yt.js"></script>
+		
 		<!-- generated idea text -->
 		<div class = "prompt" id = "content">
 			<p>. . .</p>
