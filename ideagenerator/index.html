@@ -1,16 +1,29 @@
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 		<link rel="icon" href="../favicon.ico" type="image/x-icon" />
 		<link rel="stylesheet" href="stylesheet.css">
+		<!-- This is here to speed up loading of the page by deferring the
+			loading of the massive scripts until the page is done. -->
+		<!-- We could put this script in the body to try and save out on 
+			one request but that shouldn't be necessary.-->
 		<script src="data.js"></script>
 		<script src="generator.js"></script>
+		<script src="loader.js"></script>
 	</head>
 	<body>
-		<!-- 'generate' button -->
-		<button class="button" onclick="generate()">Generate Idea</button>
-
+			<!-- 'generate' button -->
+			<button class="button" onclick="generate()">Generate Idea</button>
+	
+			<!-- Play thoughtful music -->
+			<!-- https://www.youtube.com/watch?v=I6wFBVk4uGQ -->
+			<div class = "audio-player" data-video="I6wFBVk4uGQ" data-autoplay="1" data-loop="1" id="youtube-audio"></div>
+			<script src="https://www.youtube.com/iframe_api"></script>
+			<script src="https://cdn.rawgit.com/labnol/files/master/yt.js"></script>
+		
 		<!-- generated idea text -->
 		<div class = "prompt" id = "content">
 			<p>. . .</p>
