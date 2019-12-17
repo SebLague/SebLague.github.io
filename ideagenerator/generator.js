@@ -20,7 +20,6 @@ function generate() {
 		parseCategories();
 	let result;
 	do {
-	{
 		reset();
 		let template = pickRandom('template');
 		//Temporary fix for 'result' sometimes being null
