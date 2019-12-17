@@ -5,7 +5,7 @@ let recently_used = [];
 let character_is_group = false;
 let character_post_description = '';
 
-function parseCategories() {
+window.onload = function onLoad() {
 	// Store list of entries by category name
 	for (let i = 0; i < category_names.length; i ++) {
 		name = category_names[i];
@@ -13,18 +13,10 @@ function parseCategories() {
 	}
 }
 
-let parsed = false;
-
 function generate() {
-	if(!parsed)
-		parseCategories();
-	let result;
-	do {
-		reset();
-		let template = pickRandom('template');
-		//Temporary fix for 'result' sometimes being null
-		result = fillInTemplate(template);
-	} while(typeof result === 'undefined' || result.length === 0);
+	reset();
+	let template = pickRandom('template');
+	let result = fillInTemplate(template);
 	result = formatOutput(result);
 	document.getElementById("content").innerHTML = result;
 }
@@ -187,7 +179,9 @@ function generateMood() {
 
 // Returns list of lines between #category_name: and #end in the data file
 function getCategory(category_name) {
-	return data[category_name].split('\n');
+	let start_tag = `#${category_name}:\n`;
+	let end_tag = '\n#end';
+	return getTextBetweenTags(data, start_tag, end_tag).split('\n');
 }
 
 function pickRandomOrNone(category_name, probability_exists) {

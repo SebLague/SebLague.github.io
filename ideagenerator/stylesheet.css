@@ -32,7 +32,7 @@ body {
 	background-color: #4CAFFF;
 	
 	font-family: opensans;
-	text-align: static;
+	text-align: center;
 	font-size: 25px;
 	padding: 10px 0px;
 	color: white;
@@ -65,35 +65,4 @@ body {
 }
 .button:active {
   background-color: #5591ff;
-}
-
-.audio-player {
-	background-color: #222222;
-
-	text-align: relative;
-	padding: 10px 0px;
-	color: white;
-
-	outline-style:none;
-	border:none;
-	cursor:pointer;
-
-	position: fixed;
-	width: 130px;
-	height: 120px;
-	top: 0%;
-	right: 0%;
-
-	/* Disable text selection: https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting */
-	-webkit-touch-callout: none; /* iOS Safari */
-	-webkit-user-select: none; /* Safari */
-	-moz-user-select: none; /* Old versions of Firefox */
-	-ms-user-select: none; /* Internet Explorer/Edge */
-	user-select: none; /* Chrome, Opera and Firefox */
-
-	/* 
-	Prevent double-tapping on button from zooming page on mobile
-	https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action
-	*/
-	touch-action: manipulation; 
 }
