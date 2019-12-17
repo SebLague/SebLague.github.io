@@ -25,7 +25,7 @@ function generate() {
 		let template = pickRandom('template');
 		//Temporary fix for 'result' sometimes being null
 		result = fillInTemplate(template);
-	}while(typeof result === 'undefined' || result.length === 0);
+	} while(typeof result === 'undefined' || result.length === 0);
 	result = formatOutput(result);
 	document.getElementById("content").innerHTML = result;
 }
