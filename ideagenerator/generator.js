@@ -19,7 +19,7 @@ function generate() {
 	if(!parsed)
 		parseCategories();
 	let result;
-	do
+	do {
 	{
 		reset();
 		let template = pickRandom('template');
