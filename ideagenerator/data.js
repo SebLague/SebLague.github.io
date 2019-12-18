@@ -469,6 +469,6 @@ with destructible terrain
 with a built-in level editor
 with a [funny, moving] story
 with livestream chat integration
-with the only sound coming from <a> [Microsoft Bob, Windows error tones, synthesizer, orchestra, hard drive wirring]
+only using sounds coming from <a> [Microsoft Bob, error tones, synthesizer, orchestra, hard drive whirring]
 #end
 `;
