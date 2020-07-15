@@ -17,7 +17,7 @@ body {
 .prompt {
 	font-family: opensans;
 	color: white;
-	text-align: center;
+	/*text-align: center;*/
 	font-size:25px;
 
 	position: fixed;
@@ -26,6 +26,41 @@ body {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	/*outline: 2px solid #555555;*/
+
+	display: flex; /* Flex display allows two blocks in the same row, while still being responsive. */
+	align-items: center; /* Vertically center items */
+	justify-content: center; /* Hotizontally center items (replaces text-align: center)*/
+	flex-flow: row wrap; /* Items should be next to, not below one another */
+}
+
+.icon-save {
+	position: relative;
+	height: 25px !important; /* Using !important to force the height and width attributes*/
+	width: 25px !important;
+	margin: 10px; /* Prevents the two elements from sticking together */
+}
+
+.icon-save img {
+	height: 25px;
+	width: 25px;
+	transition-duration: 300ms; /* Length of the animation */
+	/* Position both images on top of each other */
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 1;
+}
+
+.icon-save img.solid {
+	opacity: 0;
+}
+
+.icon-save.saved img {
+	opacity: 0;
+}
+
+.icon-save.saved img.solid {
+	opacity: 1;
 }
 
 .button {
