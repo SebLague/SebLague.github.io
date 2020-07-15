@@ -1,1 +1,4 @@
+# I'm using a node.js server for development, but I don't want to upload it.
 node_modules/
+package.json
+package-lock.json
