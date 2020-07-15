@@ -1,28 +1,43 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-		<link rel="icon" href="../favicon.ico" type="image/x-icon" />
-		<link rel="stylesheet" href="stylesheet.css">
-		<script src="data.js"></script>
-		<script src="generator.js"></script>
-	</head>
-	<body>
-		<!-- 'generate' button -->
-		<button class="button" onclick="generate()">Generate Idea</button>
 
-		<!-- generated idea text -->
-		<div class="prompt" id="content">
-			<p>. . .</p>
-			<div class="icon-save">
+<head>
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<link rel="icon" href="../favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="stylesheet.css">
+	<script src="data.js"></script>
+	<script src="generator.js"></script>
+</head>
+
+<body>
+	<!-- 'generate' button -->
+	<button class="button" onclick="generate()">Generate Idea</button>
+
+	<!-- generated idea text -->
+	<div class="prompt">
+		<p id="content">. . .</p>
+		<div class="buttons">
+			<div class="ib button-prev" onclick="prevSaved()">
+				<img src="Resources/chevron-left-solid.svg" alt="previous save">
+			</div>
+			<div class="ib icon-save" onclick="toggleSaved()">
 				<img src="Resources/heart-regular.svg" alt="save">
-				<img src="Resources/heart-solid.svg" alt="saved">
+				<img src="Resources/heart-solid.svg" class="solid" alt="saved">
+			</div>
+			<div class="ib button-next" onclick="nextSaved()">
+				<img src="Resources/chevron-right-solid.svg" alt="next save">
 			</div>
 		</div>
+	</div>
 
-		<!-- yt channel link -->
-		<div class = "social">
-			<a target="_blank" href="https://www.youtube.com/c/SebastianLague"><img src="Resources/ytbanner.png" width="200" height="50" title="YouTube channel" alt="YouTube channel"></a>
-		</div>
-	</body>
+	<!-- yt channel link -->
+	<div class="social">
+		<a target="_blank" href="https://www.youtube.com/c/SebastianLague"><img src="Resources/ytbanner.png" width="200"
+				height="50" title="YouTube channel" alt="YouTube channel"></a>
+	</div>
+
+	<div class="legal">Heart and Chevron Icons courtesy of <a href="https://fontawesome.com/license">fontawesome.</a></div>
+	<script src="save.js"></script>
+</body>
+
 </html>

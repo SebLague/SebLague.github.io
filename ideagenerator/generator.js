@@ -18,6 +18,7 @@ function generate() {
 	let template = pickRandom('template');
 	let result = fillInTemplate(template);
 	result = formatOutput(result);
+	document.querySelector('.icon-save').classList.remove('saved'); /* Remove the 'saved' class from the button */
 	document.getElementById("content").innerHTML = result;
 }
 

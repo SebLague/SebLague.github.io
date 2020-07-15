@@ -4,6 +4,10 @@ body {
 	background-color: #222222;
 }
 
+p {
+	display: inline-block; /*Allow the save icon to appear next to the text, even when it's multiple lines long*/
+}
+
 .social {
 	touch-action: manipulation;
 	/* Disable text selection: https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting */
@@ -33,14 +37,24 @@ body {
 	flex-flow: row wrap; /* Items should be next to, not below one another */
 }
 
-.icon-save {
+.buttons {
+	margin: 10px;
+}
+
+.ib {
 	position: relative;
 	height: 25px !important; /* Using !important to force the height and width attributes*/
 	width: 25px !important;
-	margin: 10px; /* Prevents the two elements from sticking together */
+	display: inline-block;
+	cursor: pointer;
+	transition-duration: 300ms;
 }
 
-.icon-save img {
+.ib:hover {
+	opacity: 0.5;
+}
+
+.ib img {
 	height: 25px;
 	width: 25px;
 	transition-duration: 300ms; /* Length of the animation */
@@ -100,4 +114,14 @@ body {
 }
 .button:active {
   background-color: #5591ff;
+}
+
+.legal {
+	color: #fff;
+	font-family: opensans;
+	font-size: 10px;
+}
+
+.legal a {
+	color: #fff;
 }
