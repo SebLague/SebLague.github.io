@@ -1,4 +1,7 @@
- @font-face { font-family: opensans; src: url('Resources/OpenSans-Regular.ttf');}
+@font-face {
+	font-family: opensans;
+	src: url("Resources/OpenSans-Regular.ttf");
+}
 
 body {
 	background-color: #222222;
@@ -24,7 +27,7 @@ p {
 	font-family: opensans;
 	color: white;
 	/*text-align: center;*/
-	font-size:25px;
+	font-size: 25px;
 
 	position: fixed;
 	width: 90%;
@@ -80,22 +83,22 @@ p {
 }
 
 .button {
-	background-color: #4CAFFF;
-	
+	background-color: #4cafff;
+
 	font-family: opensans;
 	text-align: center;
 	font-size: 25px;
 	padding: 10px 0px;
 	color: white;
 
-	outline-style:none;
-	border:none;
-	cursor:pointer;
+	outline-style: none;
+	border: none;
+	cursor: pointer;
 
-	position:fixed;
-	width:50%;
-	bottom : 10%;
-	left : 25%;
+	position: fixed;
+	width: 50%;
+	bottom: 10%;
+	left: 25%;
 
 	/* Disable text selection: https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting */
 	-webkit-touch-callout: none; /* iOS Safari */
@@ -108,14 +111,14 @@ p {
 	Prevent double-tapping on button from zooming page on mobile
 	https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action
 	*/
-	touch-action: manipulation; 
+	touch-action: manipulation;
 }
 
 .button:hover {
-  background-color: #5dc2f5;
+	background-color: #5dc2f5;
 }
 .button:active {
-  background-color: #5591ff;
+	background-color: #5591ff;
 }
 
 .legal {
@@ -173,3 +176,23 @@ p {
 }
 
 /* Scrollbar styling */
+/* Makes the scrollbar align more with the theme (not for IE/Edge or Firefox)*/
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #333;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #444;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
