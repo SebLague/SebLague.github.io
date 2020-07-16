@@ -2,6 +2,8 @@
 
 body {
 	background-color: #222222;
+	width: 100vw;
+	overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
 p {
@@ -125,3 +127,49 @@ p {
 .legal a {
 	color: #fff;
 }
+
+/* List page */
+.top {
+	width: 100%;
+	min-height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-direction: row wrap;
+}
+
+.top .ib {
+	margin: 5px;
+}
+
+.list {
+	width: 100% !important;
+	margin: 0.5em 0;
+	padding: 0;
+	list-style: none;
+	border-top: 1px solid white;
+}
+
+.list li {
+	width: 100%;
+	margin: 0;
+	margin-right: 0.5em;
+	padding: 1em 0.2em;
+	padding-right: 0.5em;
+	font-family: opensans;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-flow: row wrap;
+}
+
+.list li:nth-child(odd) {
+	background-color: #333333;
+}
+
+.trash {
+	margin-right: 2em;
+}
+
+/* Scrollbar styling */

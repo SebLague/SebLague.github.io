@@ -17,16 +17,19 @@
 	<div class="prompt">
 		<p id="content">. . .</p>
 		<div class="buttons">
-			<div class="ib button-prev" onclick="prevSaved()">
+			<div class="ib button-prev" onclick="prevSaved()" title="previous saved idea">
 				<img src="Resources/chevron-left-solid.svg" alt="previous save">
 			</div>
-			<div class="ib icon-save" onclick="toggleSaved()">
+			<div class="ib icon-save" onclick="toggleSaved()" title="save idea">
 				<img src="Resources/heart-regular.svg" alt="save">
 				<img src="Resources/heart-solid.svg" class="solid" alt="saved">
 			</div>
-			<div class="ib button-next" onclick="nextSaved()">
+			<div class="ib button-next" onclick="nextSaved()" title="next saved idea">
 				<img src="Resources/chevron-right-solid.svg" alt="next save">
 			</div>
+			<a href="savedList" class="ib" title="list of saved ideas">
+				<img src="Resources/icon-menu.svg" alt="list of saved ideas">
+			</a>
 		</div>
 	</div>
 
@@ -36,7 +39,7 @@
 				height="50" title="YouTube channel" alt="YouTube channel"></a>
 	</div>
 
-	<div class="legal">Heart and Chevron Icons courtesy of <a href="https://fontawesome.com/license">fontawesome.</a></div>
+	<div class="legal">Heart, Menu and Chevron Icons courtesy of <a href="https://fontawesome.com/license">fontawesome.</a></div>
 	<script src="save.js"></script>
 </body>
 
