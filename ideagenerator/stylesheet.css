@@ -1,7 +1,16 @@
- @font-face { font-family: opensans; src: url('Resources/OpenSans-Regular.ttf');}
+@font-face {
+	font-family: opensans;
+	src: url("Resources/OpenSans-Regular.ttf");
+}
 
 body {
 	background-color: #222222;
+	width: 100vw;
+	overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+p {
+	display: inline-block; /*Allow the save icon to appear next to the text, even when it's multiple lines long*/
 }
 
 .social {
@@ -17,8 +26,8 @@ body {
 .prompt {
 	font-family: opensans;
 	color: white;
-	text-align: center;
-	font-size:25px;
+	/*text-align: center;*/
+	font-size: 25px;
 
 	position: fixed;
 	width: 90%;
@@ -26,25 +35,70 @@ body {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	/*outline: 2px solid #555555;*/
+
+	display: flex; /* Flex display allows two blocks in the same row, while still being responsive. */
+	align-items: center; /* Vertically center items */
+	justify-content: center; /* Hotizontally center items (replaces text-align: center)*/
+	flex-flow: row wrap; /* Items should be next to, not below one another */
+}
+
+.buttons {
+	margin: 10px;
+}
+
+.ib {
+	position: relative;
+	height: 25px !important; /* Using !important to force the height and width attributes*/
+	width: 25px !important;
+	display: inline-block;
+	cursor: pointer;
+	transition-duration: 300ms;
+}
+
+.ib:hover {
+	opacity: 0.5;
+}
+
+.ib img {
+	height: 25px;
+	width: 25px;
+	transition-duration: 300ms; /* Length of the animation */
+	/* Position both images on top of each other */
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 1;
+}
+
+.icon-save img.solid {
+	opacity: 0;
+}
+
+.icon-save.saved img {
+	opacity: 0;
+}
+
+.icon-save.saved img.solid {
+	opacity: 1;
 }
 
 .button {
-	background-color: #4CAFFF;
-	
+	background-color: #4cafff;
+
 	font-family: opensans;
 	text-align: center;
 	font-size: 25px;
 	padding: 10px 0px;
 	color: white;
 
-	outline-style:none;
-	border:none;
-	cursor:pointer;
+	outline-style: none;
+	border: none;
+	cursor: pointer;
 
-	position:fixed;
-	width:50%;
-	bottom : 10%;
-	left : 25%;
+	position: fixed;
+	width: 50%;
+	bottom: 10%;
+	left: 25%;
 
 	/* Disable text selection: https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting */
 	-webkit-touch-callout: none; /* iOS Safari */
@@ -57,12 +111,88 @@ body {
 	Prevent double-tapping on button from zooming page on mobile
 	https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action
 	*/
-	touch-action: manipulation; 
+	touch-action: manipulation;
 }
 
 .button:hover {
-  background-color: #5dc2f5;
+	background-color: #5dc2f5;
 }
 .button:active {
-  background-color: #5591ff;
+	background-color: #5591ff;
+}
+
+.legal {
+	color: #fff;
+	font-family: opensans;
+	font-size: 10px;
+}
+
+.legal a {
+	color: #fff;
+}
+
+/* List page */
+.top {
+	width: 100%;
+	min-height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-direction: row wrap;
+}
+
+.top .ib {
+	margin: 5px;
+}
+
+.list {
+	width: 100% !important;
+	margin: 0.5em 0;
+	padding: 0;
+	list-style: none;
+	border-top: 1px solid white;
+}
+
+.list li {
+	width: 100%;
+	margin: 0;
+	margin-right: 0.5em;
+	padding: 1em 0.2em;
+	padding-right: 0.5em;
+	font-family: opensans;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-flow: row wrap;
+}
+
+.list li:nth-child(odd) {
+	background-color: #333333;
+}
+
+.trash {
+	margin-right: 2em;
+}
+
+/* Scrollbar styling */
+/* Makes the scrollbar align more with the theme (not for IE/Edge or Firefox)*/
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #333;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #444;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
 }
