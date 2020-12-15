@@ -1,19 +1,19 @@
 category_names = [
-'template',
-'genre',
-'genre_modifier',
-'perspective',
-'group_name',
-'character',
-'character_description',
-'character_description_post',
-'goal_prefix',
-'goal',
-'setting',
-'setting_description',
-'theme',
-'mood',
-'wildcard'
+	'template',
+	'genre',
+	'genre_modifier',
+	'perspective',
+	'group_name',
+	'character',
+	'character_description',
+	'character_description_post',
+	'goal_prefix',
+	'goal',
+	'setting',
+	'setting_description',
+	'theme',
+	'mood',
+	'wildcard'
 ];
 
 data = `
