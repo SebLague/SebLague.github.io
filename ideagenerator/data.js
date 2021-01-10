@@ -152,6 +152,7 @@ tax collector
 plumber
 electrician
 mechanic
+artist
 #end
 
 ----------------- DESCRIPTIONS (you play as a ... character) ----------------- 
