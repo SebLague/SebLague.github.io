@@ -186,6 +186,11 @@
 				<td>ulong</td>
 				<td>ZobristKey</td>
 				<td>64-bit hash of the current position.</td>
+			</tr>
+			<tr>
+				<td>Board</td>
+				<td>Board.CreateBoardFromFEN(string fen)</td>
+				<td>Creates a board from the given fen string. Please note that this is quite slow, and so it is advised to use the board given in the Think function, and update it using MakeMove and UndoMove instead.</td>
 			</tr><tr class="new-section-header"id="move-struct">
 				<th colspan="3">Move (struct)</th>
 			</tr>
