@@ -1,190 +1,471 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-td, th {
-  border: 1px solid #444444;
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-tr.new-section-header {
-  background-color: #4faaff;
-}
-</style>
-</head>
-<body>
-
-<h1>Docs</h1>
-<!--Test-->
-<table>
-  <tr class="new-section-header">
-    <th colspan="3">Class (class)</th>
-  </tr>
-  <tr>
-    <th>Return Type</th>
-    <th>Name</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>void</td>
-    <td>Name(<a href="#move-struct">LinkTest</a> test)</td>
-    <td>Description about the function blablabla.</td>
-  </tr>
-  <tr>
-    <td>void</td>
-    <td>Name</td>
-    <td>Description about the function blablabla.</td>
-  </tr>
-    <tr>
-    <td>void</td>
-    <td>Name</td>
-    <td>Description about the function blablabla.</td>
-  </tr>
-    <tr>
-    <td>void</td>
-    <td>Name</td>
-    <td>Description about the function blablabla.</td>
-  </tr>
-    <tr>
-    <td>void</td>
-    <td>Name</td>
-    <td>Description about the function blablabla.</td>
-  </tr>
-    <tr>
-    <td>void</td>
-    <td>Name</td>
-    <td>Description about the function blablabla.</td>
-  </tr>
-    <tr>
-    <td>void</td>
-    <td>Name</td>
-    <td>Description about the function blablabla.</td>
-  </tr>
-    <tr>
-    <td>void</td>
-    <td>Name</td>
-    <td>Description about the function blablabla.</td>
-  </tr>
-    <tr>
-    <td>void</td>
-    <td>Name</td>
-    <td>Description about the function blablabla.</td>
-  </tr>
-    <tr>
-    <td>void</td>
-    <td>Name</td>
-    <td>Description about the function blablabla.</td>
-  </tr>
-    <tr>
-    <td>void</td>
-    <td>Name</td>
-    <td>Description about the function blablabla.</td>
-  </tr>
-    <tr>
-    <td>void</td>
-    <td>Name</td>
-    <td>Description about the function blablabla.</td>
-  </tr>
-    </tr>
-    <tr>
-    <td>void</td>
-    <td>Name</td>
-    <td>Description about the function blablabla.</td>
-  </tr>
-    </tr>
-    <tr>
-    <td>void</td>
-    <td>Name</td>
-    <td>Description about the function blablabla.</td>
-  </tr>
-    </tr>
-    <tr>
-    <td>void</td>
-    <td>Name</td>
-    <td>Description about the function blablabla.</td>
-  </tr>
-    </tr>
-    <tr>
-    <td>void</td>
-    <td>Name</td>
-    <td>Description about the function blablabla.</td>
-  </tr>
-    </tr>
-    <tr>
-    <td>void</td>
-    <td>Name</td>
-    <td>Description about the function blablabla.</td>
-  </tr>
-    </tr>
-    <tr>
-    <td>void</td>
-    <td>Name</td>
-    <td>Description about the function blablabla.</td>
-  </tr>
-    </tr>
-    <tr>
-    <td>void</td>
-    <td>Name</td>
-    <td>Description about the function blablabla.</td>
-  </tr>
-    </tr>
-    <tr>
-    <td>void</td>
-    <td>Name</td>
-    <td>Description about the function blablabla.</td>
-  </tr>
-    </tr>
-    <tr>
-    <td>void</td>
-    <td>Name</td>
-    <td>Description about the function blablabla.</td>
-  </tr>
-    </tr>
-    <tr>
-    <td>void</td>
-    <td>Name</td>
-    <td>Description about the function blablabla.</td>
-  </tr>
-    </tr>
-    <tr>
-    <td>void</td>
-    <td>Name</td>
-    <td>Description about the function blablabla.</td>
-  </tr>
-    </tr>
-    <tr>
-    <td>void</td>
-    <td>Name</td>
-    <td>Description about the function blablabla.</td>
-  </tr>
-    </tr>
-    <tr>
-    <td>void</td>
-    <td>Name</td>
-    <td>Description about the function blablabla.</td>
-  </tr>
-
-  <!-- New section -->
-  <tr class="new-section-header" id="move-struct">
-    <th colspan="3">Struct (struct)</th>
-  </tr>
-  <tr>
-    <td>Return Type</td>
-    <td>Name</td>
-    <td>Description</td>
-  </tr>
-</table>
-
-</body>
+	<head>
+		<style>
+			a:link {
+			  color: blue;
+			}
+			a:visited {
+			  color: blue;
+			}
+			a:hover {
+			  color: #9e60f0;
+			}
+			a:active {
+			  color: #7038ba;
+			}
+		
+			table {
+				font-family: Arial, sans-serif;
+				border-collapse: collapse;
+				width: 100%;
+			}
+		
+			td, th {
+				border: 1px solid #444444;
+				text-align: left;
+				padding: 8px;
+			}
+		
+			table td:nth-child(1) {
+			  width: 8%;
+			}
+		
+			table td:nth-child(2) {
+			  width: 25%;
+			}
+		
+			table, th, td {
+			  border:1px solid black;
+			}
+		
+			tr:nth-child(even) {
+				background-color: #eeeeee;
+			}
+			tr.new-section-header {
+				background-color: #4faaff;
+			}
+			tr.labels {
+				background-color: #c5e0fa;
+			}
+		</style>
+	</head>
+	<body>
+		<table>
+			<tr class="new-section-header">
+				<th colspan="3">MyBot (class)</th>
+			</tr>
+			<tr class="labels">
+				<th>Type</th>
+				<th>Definition</th>
+				<th>Notes</th>
+			</tr>
+			<tr>
+				<td><a href="#move-struct">Move</a></td>
+				<td>Think(<a href="#board-class">Board</a> board, <a href="#timer-class">Timer</a> timer)</td>
+				<td>This is the function you need to implement for this challenge.</td>
+			</tr><tr class="new-section-header"id="board-class">
+				<th colspan="3">Board (class)</th>
+			</tr>
+			<tr class="labels">
+				<th>Type</th>
+				<th>Definition</th>
+				<th>Notes</th>
+			</tr>
+			<tr>
+				<td>void</td>
+				<td>MakeMove(<a href="#move-struct">Move</a> move)</td>
+				<td>Updates the board state with the given move. The move is assumed to be legal, and may result in errors if it is not. Can be undone with the UndoMove() method</td>
+			</tr>
+			<tr>
+				<td>void</td>
+				<td>UndoMove(<a href="#move-struct">Move</a> move)</td>
+				<td>Undo a move that was made with the MakeMove method. Moves must be undone in reverse order, so for example, if moves A, B, C are made, they must be undone in the order C, B, A</td>
+			</tr>
+			<tr>
+				<td>bool</td>
+				<td>TrySkipTurn()</td>
+				<td>Try skip the current turn. This will fail and return false if the player is currently in check. Note that skipping a turn is not allowed during an actual game, but can be used as a search technique.</td>
+			</tr>
+			<tr>
+				<td>void</td>
+				<td>UndoSkipTurn()</td>
+				<td>Undo a turn that was succesfully skipped with TrySkipTurn()</td>
+			</tr>
+			<tr>
+				<td><a href="#move-struct">Move</a>[]</td>
+				<td>GetLegalMoves(bool capturesOnly)</td>
+				<td>Gets an array of the legal moves in the current position. Can choose to get only capture moves with the optional 'capturesOnly' parameter.</td>
+			</tr>
+			<tr>
+				<td>bool</td>
+				<td>IsInCheck()</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>bool</td>
+				<td>IsInCheckmate()</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>bool</td>
+				<td>IsDraw()</td>
+				<td>Test if the current position is a draw due stalemate, repetition, insufficient material, or 50-move rule.</td>
+			</tr>
+			<tr>
+				<td>bool</td>
+				<td>HasKingsideCastleRight(bool white)</td>
+				<td>Does the given player still have the right to castle kingside? Note that having the right to castle doesn't necessarily mean castling is legal right now (for example, a piece might be in the way, or player might be in check, etc).</td>
+			</tr>
+			<tr>
+				<td>bool</td>
+				<td>HasQueensideCastleRight(bool white)</td>
+				<td>Does the given player still have the right to castle queenside? Note that having the right to castle doesn't necessarily mean castling is legal right now (for example, a piece might be in the way, or player might be in check, etc).</td>
+			</tr>
+			<tr>
+				<td>bool</td>
+				<td>SquareIsAttackedByOpponent(<a href="#square-struct">Square</a> square)</td>
+				<td>Is the given square attacked by the opponent? (opponent being whichever player doesn't currently have the right to move).</td>
+			</tr>
+			<tr>
+				<td><a href="#square-struct">Square</a></td>
+				<td>GetKingSquare(bool white)</td>
+				<td>Gets the square that the king (of the given colour) is currently on.</td>
+			</tr>
+			<tr>
+				<td><a href="#piece-struct">Piece</a></td>
+				<td>GetPiece(<a href="#square-struct">Square</a> square)</td>
+				<td>Gets the piece on the given square. If the square is empty, the piece will have a <a href="#piece-type-enum">PieceType</a> of None.</td>
+			</tr>
+			<tr>
+				<td><a href="#piece-list-class">PieceList</a></td>
+				<td>GetPieceList(<a href="#piece-type-enum">PieceType</a> type, bool white)</td>
+				<td>Gets a list of pieces of the given type and colour</td>
+			</tr>
+			<tr>
+				<td><a href="#piece-list-class">PieceList</a>[]</td>
+				<td>GetAllPieceLists()</td>
+				<td>Gets an array of all the piece lists. In order these are: Pawns(white), Knights (white), Bishops (white), Rooks (white), Queens (white), King (white), Pawns (black), Knights (black), Bishops (black), Rooks (black), Queens (black), King (black).</td>
+			</tr>
+			<tr>
+				<td>string</td>
+				<td>GetFenString()</td>
+				<td>FEN representation of the current position.</td>
+			</tr>
+			<tr>
+				<td>ulong</td>
+				<td>GetPieceBitboard(<a href="#piece-type-enum">PieceType</a> type, bool white)</td>
+				<td>64-bit number where each bit set to 1 represents a square that contains a piece of the given type/colour.</td>
+			</tr>
+			<tr>
+				<td>ulong</td>
+				<td>WhitePiecesBitboard</td>
+				<td>64-bit number where each bit set to 1 represents a square that contains a white piece.</td>
+			</tr>
+			<tr>
+				<td>ulong</td>
+				<td>BlackPiecesBitboard</td>
+				<td>64-bit number where each bit set to 1 represents a square that contains a black piece.</td>
+			</tr>
+			<tr>
+				<td>ulong</td>
+				<td>AllPiecesBitboard</td>
+				<td>64-bit number where each bit set to 1 represents a square that contains a piece.</td>
+			</tr>
+			<tr>
+				<td>bool</td>
+				<td>IsWhiteToMove</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>int</td>
+				<td>PlyCount</td>
+				<td>Number of ply (a single move by either white or black) played so far.</td>
+			</tr>
+			<tr>
+				<td>ulong</td>
+				<td>ZobristKey</td>
+				<td>64-bit hash of the current position.</td>
+			</tr><tr class="new-section-header"id="move-struct">
+				<th colspan="3">Move (struct)</th>
+			</tr>
+			<tr class="labels">
+				<th>Type</th>
+				<th>Definition</th>
+				<th>Notes</th>
+			</tr>
+			<tr>
+				<td><a href="#move-struct">Move</a></td>
+				<td>new Move(string name, <a href="#board-class">Board</a> board)</td>
+				<td>Constructor for creating a move from its name (in UCI format). For example, to move from the square b1 to c3, the move string would be "b1c3". If the move is a pawn promotion, the promotion type must be added to the end: 'q' = queen, 'r' = rook, 'n' = knight, 'b' = bishop. So an example move would be "e7e8q". You'll typically want to get legal moves from the board, rather than creating them yourself.</td>
+			</tr>
+			<tr>
+				<td><a href="#square-struct">Square</a></td>
+				<td>StartSquare</td>
+				<td>The square that this move is moving the piece from.</td>
+			</tr>
+			<tr>
+				<td><a href="#square-struct">Square</a></td>
+				<td>TargetSquare</td>
+				<td>The square that this move is moving the piece to.</td>
+			</tr>
+			<tr>
+				<td><a href="#piece-type-enum">PieceType</a></td>
+				<td>MovePieceType</td>
+				<td>The type of piece that is being moved.</td>
+			</tr>
+			<tr>
+				<td><a href="#piece-type-enum">PieceType</a></td>
+				<td>CapturePieceType</td>
+				<td>If this is a capture move, the type of piece that is being captured.</td>
+			</tr>
+			<tr>
+				<td><a href="#piece-type-enum">PieceType</a></td>
+				<td>PromotionPieceType</td>
+				<td>If this is a pawn promotion, the type of piece that the pawn is being promoted to.</td>
+			</tr>
+			<tr>
+				<td>bool</td>
+				<td>IsCapture</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>bool</td>
+				<td>IsEnPassant</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>bool</td>
+				<td>IsPromotion</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>bool</td>
+				<td>IsCastles</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>bool</td>
+				<td>IsNull</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>bool</td>
+				<td>Equals(<a href="#move-struct">Move</a> otherMove)</td>
+				<td>Tests if two moves are the same. This is true if they move to/from the same square, and move/capture/promote the same piece type.</td>
+			</tr>
+			<tr>
+				<td><a href="#move-struct">Move</a></td>
+				<td>Move.NullMove</td>
+				<td>Represents a null/invalid move, which can be used as a placeholder until a valid move has been found.</td>
+			</tr><tr class="new-section-header"id="square-struct">
+				<th colspan="3">Square (struct)</th>
+			</tr>
+			<tr class="labels">
+				<th>Type</th>
+				<th>Definition</th>
+				<th>Notes</th>
+			</tr>
+			<tr>
+				<td><a href="#square-struct">Square</a></td>
+				<td>new Square(string name)</td>
+				<td>Constructor for creating a square from its algebraic name (e.g. "e4")</td>
+			</tr>
+			<tr>
+				<td>int</td>
+				<td>File</td>
+				<td>Value from 0 to 7 representing files 'a' to 'h'</td>
+			</tr>
+			<tr>
+				<td>int</td>
+				<td>Rank</td>
+				<td>Value from 0 to 7 representing ranks '1' to '8'</td>
+			</tr>
+			<tr>
+				<td>int</td>
+				<td>Index</td>
+				<td>Value from 0 to 63. The values map to the board like so:<br>0 – 7 : a1 – h1<br>8 – 15 : a2 – h2<br><b>...</b><br><br>56 – 63 : a8 – h8</td>
+			</tr>
+			<tr>
+				<td>string</td>
+				<td>Name</td>
+				<td>The algebraic name of the square, e.g. "e4"</td>
+			</tr><tr class="new-section-header"id="piece-struct">
+				<th colspan="3">Piece (struct)</th>
+			</tr>
+			<tr class="labels">
+				<th>Type</th>
+				<th>Definition</th>
+				<th>Notes</th>
+			</tr>
+			<tr>
+				<td><a href="#piece-struct">Piece</a></td>
+				<td>new Piece(<a href="#piece-type-enum">PieceType</a> type, bool isWhite, <a href="#square-struct">Square</a> square)</td>
+				<td>Constructor for creating a new piece. You'll typically want to get pieces from the board, rather than constructing them yourself.</td>
+			</tr>
+			<tr>
+				<td>bool</td>
+				<td>IsWhite</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><a href="#piece-type-enum">PieceType</a></td>
+				<td>PieceType</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><a href="#square-struct">Square</a></td>
+				<td>Square</td>
+				<td>The square that the piece is on. Note: this value will not be updated if the piece is moved (it is a snapshot of the state of the piece when it was looked up).</td>
+			</tr>
+			<tr>
+				<td>bool</td>
+				<td>IsPawn</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>bool</td>
+				<td>IsKnight</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>bool</td>
+				<td>IsBishop</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>bool</td>
+				<td>IsRook</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>bool</td>
+				<td>IsQueen</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>bool</td>
+				<td>IsKing</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>bool</td>
+				<td>IsNull</td>
+				<td>This will be true if the piece was retrieved from an empty square on the board</td>
+			</tr><tr class="new-section-header"id="piece-type-enum">
+				<th colspan="3">PieceType (enum)</th>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>None = 0, Pawn = 1, Knight = 2, Bishop = 3, Rook = 4, Queen = 5, King = 6</td>
+			</tr><tr class="new-section-header"id="piece-list-class">
+				<th colspan="3">PieceList (class)</th>
+			</tr>
+			<tr class="labels">
+				<th>Type</th>
+				<th>Definition</th>
+				<th>Notes</th>
+			</tr>
+			<tr>
+				<td>int</td>
+				<td>Count</td>
+				<td>The number of pieces in the list</td>
+			</tr>
+			<tr>
+				<td>bool</td>
+				<td>IsWhitePieceList</td>
+				<td>True if the pieces in this list are white, false if they are black</td>
+			</tr>
+			<tr>
+				<td><a href="#piece-type-enum">PieceType</a></td>
+				<td>TypeOfPieceInList</td>
+				<td>The type of piece stored in this list (a PieceList always contains only one type and colour of piece)</td>
+			</tr>
+			<tr>
+				<td><a href="#piece-struct">Piece</a></td>
+				<td>GetPiece(int index)</td>
+				<td>Get the i-th piece in the list.</td>
+			</tr><tr class="new-section-header"id="timer-class">
+				<th colspan="3">Timer (class)</th>
+			</tr>
+			<tr class="labels">
+				<th>Type</th>
+				<th>Definition</th>
+				<th>Notes</th>
+			</tr>
+			<tr>
+				<td>int</td>
+				<td>MillisecondsRemaining</td>
+				<td>Amount of time left on clock for current player (in milliseconds)</td>
+			</tr>
+			<tr>
+				<td>int</td>
+				<td>MillisecondsElapsedThisTurn</td>
+				<td>Amount of time elapsed since current player started thinking (in milliseconds)</td>
+			</tr><tr class="new-section-header">
+				<th colspan="3">BitboardHelper (static class)</th>
+			</tr>
+			<tr class="labels">
+				<th>Type</th>
+				<th>Definition</th>
+				<th>Notes</th>
+			</tr>
+			<tr>
+				<td>void</td>
+				<td>SetSquare(ref ulong bitboard, <a href="#square-struct">Square</a> square)</td>
+				<td>Set the given square on the bitboard to 1.</td>
+			</tr>
+			<tr>
+				<td>void</td>
+				<td>ClearSquare(ref ulong bitboard, <a href="#square-struct">Square</a> square)</td>
+				<td>Clear the given square on the bitboard to 0.</td>
+			</tr>
+			<tr>
+				<td>void</td>
+				<td>ToggleSquare(ref ulong bitboard, <a href="#square-struct">Square</a> square)</td>
+				<td>Toggle the given square on the bitboard between 0 and 1.</td>
+			</tr>
+			<tr>
+				<td>bool</td>
+				<td>SquareIsSet(ulong bitboard, <a href="#square-struct">Square</a> square)</td>
+				<td>Returns true if the given square is set to 1 on the bitboard, otherwise false.</td>
+			</tr>
+			<tr>
+				<td>int</td>
+				<td>ClearAndGetIndexOfLSB(ref ulong bitboard)</td>
+				<td>Returns index of the first bit that is set to 1. The bit will also be cleared to zero. This can be useful for iterating over all the set squares in a bitboard</td>
+			</tr>
+			<tr>
+				<td>int</td>
+				<td>GetNumberOfSetBits(ulong bitboard)</td>
+				<td>Returns the number of bits that set to 1 in the given bitboard.</td>
+			</tr>
+			<tr>
+				<td>ulong</td>
+				<td>GetSliderAttacks(<a href="#piece-type-enum">PieceType</a> type, <a href="#square-struct">Square</a> square, <a href="#board-class">Board</a> board)</td>
+				<td>Gets a bitboard where each bit that is set to 1 represents a square that the given sliding piece type is able to attack. These attacks are calculated from the given square, and take the given board state into account (so attacks will be blocked by pieces that are in the way). Valid only for sliding piece types (queen, rook, and bishop).</td>
+			</tr>
+			<tr>
+				<td>ulong</td>
+				<td>GetSliderAttacks(<a href="#piece-type-enum">PieceType</a> type, <a href="#square-struct">Square</a> square, ulong blockers)</td>
+				<td>Gets a bitboard where each bit that is set to 1 represents a square that the given sliding piece type is able to attack. These attacks are calculated from the given square, and take the given blocker bitboard into account (so attacks will be blocked by pieces that are in the way). Valid only for sliding piece types (queen, rook, and bishop).</td>
+			</tr>
+			<tr>
+				<td>ulong</td>
+				<td>GetKnightAttacks(Square square)</td>
+				<td>Gets a bitboard of squares that a knight can attack from the given square.</td>
+			</tr>
+			<tr>
+				<td>ulong</td>
+				<td>GetKingAttacks(Square square)</td>
+				<td>Gets a bitboard of squares that a king can attack from the given square.</td>
+			</tr>
+			<tr>
+				<td>ulong</td>
+				<td>GetPawnAttacks(Square square, bool isWhite)</td>
+				<td>Gets a bitboard of squares that a pawn (of the given colour) can attack from the given square.</td>
+			</tr>
+		</table><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	</body>
 </html>
-
