@@ -417,6 +417,11 @@
 				<th>Notes</th>
 			</tr>
 			<tr>
+				<td></td>
+				<td></td>
+				<td>A bitboard is a 64 bit integer (ulong), in which each bit that is set to 1 represents something about the state of the corresponding square on the board (such as whether a particular type of piece is there, etc.) The 64 bits map to the squares like so:<br>Bit 0 (LSB) to bit 7 : 'a1' to 'h1'.<br>Bit 8 to bit 15 : 'a2' to 'h2'<br><b>...</b><br>Bit 56 to bit 63 : 'a8' to 'h8'.</td>
+			</tr>
+			<tr>
 				<td>void</td>
 				<td>SetSquare(ref ulong bitboard, <a href="#square-struct">Square</a> square)</td>
 				<td>Set the given square on the bitboard to 1.</td>
