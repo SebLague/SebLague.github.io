@@ -98,6 +98,11 @@
 				<td>Gets an array of the legal moves in the current position. Can choose to get only capture moves with the optional 'capturesOnly' parameter.</td>
 			</tr>
 			<tr>
+				<td>void</td>
+				<td>GetLegalMovesNonAlloc(ref Span&lt<a href="#move-struct">Move</a>&gt moveList, bool capturesOnly)</td>
+				<td>(New in V1.13). Fills the given move span with legal moves, and slices it to the correct length. This gives the same result as the GetLegalMoves function, but allows you to be more efficient with memory by allocating moves on the stack rather than the heap. Can choose to get only capture moves with the optional 'capturesOnly' parameter.<br>Example usage:<br>System.Span&lt<a href="#move-struct">Move</a>&gt moves = stackalloc <a href="#move-struct">Move</a>[256];<br>board.GetLegalMovesNonAlloc(ref moves);</td>
+			</tr>
+			<tr>
 				<td>bool</td>
 				<td>IsInCheck()</td>
 				<td></td>
