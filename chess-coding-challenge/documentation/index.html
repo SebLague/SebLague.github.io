@@ -75,7 +75,7 @@
 			<tr>
 				<td>void</td>
 				<td>MakeMove(<a href="#move-struct">Move</a> move)</td>
-				<td>Updates the board state with the given move. The move is assumed to be legal, and may result in errors if it is not. Can be undone with the UndoMove() method</td>
+				<td>Updates the board state with the given move. The move is assumed to be legal, and may result in errors if it is not. Note that this doesn't make the move in the actual game, it just allows you to look ahead at future possibilities. So, making a move will toggle the IsWhiteToMove property, and calling GetLegalMoves() will now return the other player's moves. The move can be undone with the UndoMove() method.</td>
 			</tr>
 			<tr>
 				<td>void</td>
@@ -175,7 +175,7 @@
 			<tr>
 				<td>bool</td>
 				<td>IsWhiteToMove</td>
-				<td></td>
+				<td>Is it white's turn to move in the current position? Note that called MakeMove() and UndoMove() will toggle this value.</td>
 			</tr>
 			<tr>
 				<td>int</td>
