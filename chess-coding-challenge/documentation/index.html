@@ -115,7 +115,17 @@
 			<tr>
 				<td>bool</td>
 				<td>IsDraw()</td>
-				<td>Test if the current position is a draw due stalemate, repetition, insufficient material, or 50-move rule.</td>
+				<td>Test if the current position is a draw due stalemate, repetition, insufficient material, or 50-move rule. Note: this function will return true if the same position has occurred twice on the board (rather than 3 times, which is when the game is actually drawn). This quirk is to help bots avoid repeating positions unnecessarily.</td>
+			</tr>
+			<tr>
+				<td>bool</td>
+				<td>IsRepeatedPosition()</td>
+				<td>Test if the current position has occurred at least once before on the board. This includes both positions in the actual game, and positions reached by making moves while the bot is thinking.</td>
+			</tr>
+			<tr>
+				<td>bool</td>
+				<td>IsInsufficientMaterial()</td>
+				<td>Test if there are sufficient pieces remaining on the board to potentially deliver checkmate. If not, the game is automatically a draw.</td>
 			</tr>
 			<tr>
 				<td>bool</td>
@@ -188,9 +198,29 @@
 				<td>Number of ply (a single move by either white or black) played so far.</td>
 			</tr>
 			<tr>
+				<td>int</td>
+				<td>FiftyMoveCounter</td>
+				<td>Number of ply (a single move by either white or black) since the last pawn move or capture. If this value reaches a hundred (meaning 50 full moves without a pawn move or capture), the game is drawn.</td>
+			</tr>
+			<tr>
 				<td>ulong</td>
 				<td>ZobristKey</td>
 				<td>64-bit hash of the current position.</td>
+			</tr>
+			<tr>
+				<td>ulong[]</td>
+				<td>GameRepetitionHistory</td>
+				<td>Zobrist keys for all the positions played in the game so far. This is reset whenever a pawn move or capture is made, as previous positions are now impossible to reach again. Note that this is not updated when your bot makes moves on the board while thinking, but rather only when moves are actually played in the game.</td>
+			</tr>
+			<tr>
+				<td>string</td>
+				<td>GameStartFenString</td>
+				<td>FEN representation of the game's starting position.</td>
+			</tr>
+			<tr>
+				<td><a href="#move-struct">Move</a>[]</td>
+				<td>GameMoveHistory</td>
+				<td>All the moves played in the game so far. This only includes moves played in the actual game, not moves made on the board while the bot is thinking.</td>
 			</tr>
 			<tr>
 				<td>Board</td>
