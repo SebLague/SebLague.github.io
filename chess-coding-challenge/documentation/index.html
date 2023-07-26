@@ -85,12 +85,17 @@
 			<tr>
 				<td>bool</td>
 				<td>TrySkipTurn()</td>
-				<td>Try skip the current turn. This will fail and return false if the player is currently in check. Note that skipping a turn is not allowed during an actual game, but can be used as a search technique.</td>
+				<td>Try skip the current turn. This will fail and return false if the player is currently in check. Note that skipping a turn is not allowed during an actual game, but can be used as a search technique. Skipped turns can be undone with UndoSkipTurn()</td>
+			</tr>
+			<tr>
+				<td>void</td>
+				<td>ForceSkipTurn()</td>
+				<td>Forcibly skips the current turn. Unlike TrySkipTurn(), this will work even when in check, which has some dangerous side-effects if done:<br>1) Generating 'legal' moves will now include the illegal capture of the king.<br>2) If the skipped turn is undone, the board will now incorrectly report that the position is not check.<br>Note: skipping a turn is not allowed in the game, but it can be used as a search technique. Skipped turns can be undone with UndoSkipTurn()</td>
 			</tr>
 			<tr>
 				<td>void</td>
 				<td>UndoSkipTurn()</td>
-				<td>Undo a turn that was succesfully skipped with TrySkipTurn()</td>
+				<td>Undo a turn that was succesfully skipped with TrySkipTurn() or ForceSkipTurn()</td>
 			</tr>
 			<tr>
 				<td><a href="#move-struct">Move</a>[]</td>
@@ -99,7 +104,7 @@
 			</tr>
 			<tr>
 				<td>void</td>
-				<td>GetLegalMovesNonAlloc(ref Span&lt<a href="#move-struct">Move</a>&gt moveList, bool capturesOnly)</td>
+				<td>GetLegalMovesNonAlloc(ref Span&lt<a href="#move-struct">Move</a>&gt moves, bool capturesOnly)</td>
 				<td>(New in V1.13). Fills the given move span with legal moves, and slices it to the correct length. This gives the same result as the GetLegalMoves function, but allows you to be more efficient with memory by allocating moves on the stack rather than the heap. Can choose to get only capture moves with the optional 'capturesOnly' parameter.<br>Example usage:<br>System.Span&lt<a href="#move-struct">Move</a>&gt moves = stackalloc <a href="#move-struct">Move</a>[256];<br>board.GetLegalMovesNonAlloc(ref moves);</td>
 			</tr>
 			<tr>
