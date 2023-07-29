@@ -527,6 +527,16 @@
 				<td>Gets a bitboard of squares that a pawn (of the given colour) can attack from the given square.</td>
 			</tr>
 			<tr>
+				<td>ulong</td>
+				<td>GetPieceAttacks(<a href="#piece-type-enum">PieceType</a> type, <a href="#square-struct">Square</a> square, <a href="#board-class">Board</a> board, bool isWhite)</td>
+				<td>Returns a bitboard where each bit that is set to 1 represents a square that the given piece type is able to attack. These attacks are calculated from the given square, and take the given board state into account (so queen, rook, and bishop attacks will be blocked by pieces that are in the way). The isWhite parameter determines the direction of pawn captures.</td>
+			</tr>
+			<tr>
+				<td>ulong</td>
+				<td>GetPieceAttacks(<a href="#piece-type-enum">PieceType</a> type, <a href="#square-struct">Square</a> square, ulong blockers, bool isWhite)</td>
+				<td>Returns a bitboard where each bit that is set to 1 represents a square that the given piece type is able to attack. These attacks are calculated from the given square, and take the given blockers bitboard into account (so queen, rook, and bishop attacks will be blocked by pieces that are in the way). The isWhite parameter determines the direction of pawn captures.</td>
+			</tr>
+			<tr>
 				<td>void</td>
 				<td>VisualizeBitboard(ulong bitboard)</td>
 				<td>A debug function for visualizing bitboards. Highlights the squares that are set to 1 in the given bitboard with a red colour, and the squares that are set to 0 with a blue colour.</td>
