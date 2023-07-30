@@ -124,6 +124,11 @@
 			</tr>
 			<tr>
 				<td>bool</td>
+				<td>IsInStalemate()</td>
+				<td>Test if the current position is a draw by stalemate (no legal moves, but not in check)</td>
+			</tr>
+			<tr>
+				<td>bool</td>
 				<td>IsRepeatedPosition()</td>
 				<td>Test if the current position has occurred at least once before on the board. This includes both positions in the actual game, and positions reached by making moves while the bot is thinking.</td>
 			</tr>
@@ -131,6 +136,11 @@
 				<td>bool</td>
 				<td>IsInsufficientMaterial()</td>
 				<td>Test if there are sufficient pieces remaining on the board to potentially deliver checkmate. If not, the game is automatically a draw.</td>
+			</tr>
+			<tr>
+				<td>bool</td>
+				<td>IsFiftyMoveDraw()</td>
+				<td>Test if the current position is a draw by the 50-move rule (no pawn moves or captures in the last 50 moves)</td>
 			</tr>
 			<tr>
 				<td>bool</td>
@@ -443,6 +453,11 @@
 				<td>int</td>
 				<td>GameStartTimeMilliseconds</td>
 				<td>The amount of time (in milliseconds) that each player started the game with</td>
+			</tr>
+			<tr>
+				<td>int</td>
+				<td>IncrementMilliseconds</td>
+				<td>The amount of time (in milliseconds) that will be added to the remaining time after a move is made</td>
 			</tr>
 			<tr>
 				<td>int</td>
