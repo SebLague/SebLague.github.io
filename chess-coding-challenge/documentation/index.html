@@ -238,6 +238,11 @@
 				<td>All the moves played in the game so far. This only includes moves played in the actual game, not moves made on the board while the bot is thinking.</td>
 			</tr>
 			<tr>
+				<td>string</td>
+				<td>CreateDiagram(bool blackAtTop, bool includeFen, bool includeZobristKey)</td>
+				<td>Creates an ASCII-diagram of the current position. This can be printed to the console to help with debugging.</td>
+			</tr>
+			<tr>
 				<td>Board</td>
 				<td>Board.CreateBoardFromFEN(string fen)</td>
 				<td>Creates a board from the given fen string. Please note that this is quite slow, and so it is advised to use the board given in the Think function, and update it using MakeMove and UndoMove instead.</td>
@@ -325,6 +330,16 @@
 				<td><a href="#square-struct">Square</a></td>
 				<td>new Square(string name)</td>
 				<td>Constructor for creating a square from its algebraic name (e.g. "e4")</td>
+			</tr>
+			<tr>
+				<td><a href="#square-struct">Square</a></td>
+				<td>new Square(int fileIndex, int rankIndex)</td>
+				<td>Constructor for creating a square from a file and rank index [0, 7]</td>
+			</tr>
+			<tr>
+				<td><a href="#square-struct">Square</a></td>
+				<td>new Square(int squareIndex)</td>
+				<td>Constructor for creating a square from a square index [0, 63]</td>
 			</tr>
 			<tr>
 				<td>int</td>
