@@ -65,9 +65,11 @@ text-adventure
 typing
 sandbox
 programming
+fitness
+exploration
 [boat, car, kart, bike, helicopter] racing
-[theme-park, business-management, city-management, farming] simulation
-[fishing, football, cricket, basketball, hockey, tennis, table tennis, baseball, golf, volleyball, fencing, sword fighting, horse riding, snow boarding, skiing, skateboarding]
+[theme-park, business-management, city-management, farming, aircraft, space, goat, game dev] simulation
+[fishing, football, cricket, basketball, hockey, tennis, table tennis, baseball, golf, volleyball, fencing, sword fighting, horse riding, snow boarding, skiing, skateboarding, luge, boxing, sniping]
 #end
 
 // a ... #genre game
@@ -76,6 +78,8 @@ open-world
 turn-based
 sci-fi
 fantasy
+[low-poly, photorealistic]
+web-based
 #end
 
 // a ... #genre game
@@ -87,13 +91,16 @@ third-person
 top-down
 isometric
 side-view
+VR
+AR
+tabletop
 #end
 
 ----------------- CHARACTERS (you play as a...) ----------------- 
 #group_name:
 group
-[faction, gang, family, band, horde]
-[organization, league]
+[faction, gang, family, band, horde, posse, cult]
+[organization, league, autonomous collective]
 #end
 
 #character:
@@ -152,6 +159,10 @@ tax collector
 plumber
 electrician
 mechanic
+dentist
+accountant
+artist
+undertaker
 #end
 
 ----------------- DESCRIPTIONS (you play as a ... character) ----------------- 
@@ -214,12 +225,12 @@ over-enthusiastic
 
 #character_description_post:
 from [the future, another planet, another dimension, an alternate reality, a parallel universe]
-with no [friends, money, morals, soul]
+with no [friends, money, morals, soul, vision, hearing, sense of smell, taste, sense of touch]
 who loves [kittens, puppies, rainbows, cars, spaceships, animals, flowers, long walks, writing, baking, gardening, fishing, fire]
 who (is,are) passionate about [recycling, model trains, education, animal-rights, stamp-collecting, arcade games, board games, tea]
 with [a tragic backstory, an adorable pet, a secret superpower, a secret identity]
 who (can,can) [fly, bend time, turn invisible, teleport, summon spirits]
-with a debilitating fear of [heights, ghosts, flying, water, being alone, people, blood, small spaces, crowds, spiders]
+with a debilitating fear of [heights, ghosts, flying, water, being alone, people, blood, small spaces, crowds, spiders, billboards, the sun, shadows, the moon]
 with a tendency to [overreact, faint at the sight of blood, spontaneously combust, over-share]
 who (loathes,loathe) [violence, swimming, daylight, robots, humans, aliens]
 with a controversial opinion on [politics, pizza toppings, education, robots, science]
@@ -255,12 +266,13 @@ explore the [universe, world, galaxy]
 solve a [mysterious, puzzling] case
 [repair the, build <a>, protect the, destroy the] [spaceship, time-machine, armageddon-device]
 cross [the road, a busy intersection, the galaxy, the ocean]
-learn [photography, to play an instrument, to cook, to stop caring what others think]
+learn [photography, to play an instrument, to cook, to stop caring what others think, magic]
 found a new [religion, city, colony, school, guild, cult]
 start a new life [on mars, in the country, in the city, on the moon, as a shepherd]
 escape from @character:npc@
 [gain the respect of @character:npc@, win the affection of @character:npc@]
 rescue @character:npc@
+kill [Hitler, Stalin, George Washington, Alexander the Great, Julius Ceasar, Betty White]
 #end
 
 ----------------- SETTINGS (a game set... / that takes place...) ----------------- 
@@ -440,21 +452,23 @@ satirical
 
 #wildcard:
 with <a> [hand-drawn, watercolour, graphic-novel, claymation, retro, low-poly, dream-like, abstract, cardboard-cutout] art style
-controlled with [just one button, only two buttons, only the mouse, your voice]
-in which [you explode, time freezes, time slows down, time speeds up, you shrink, you get bigger, the game gets harder] whenever you [stop moving, jump]
+controlled [with, by] [just one button, only two buttons, only the mouse, your voice, a Wii remote, a joystick, twitch chat]
+in which [you explode, time freezes, time slows down, time speeds up, you shrink, you get bigger, the game gets harder] whenever you [stop moving, jump, die]
 in which you only have one [life, item, inventory-slot, chance]
-with <a> [time-travelling, grappling-hook] mechanic
+with <a> [time-travelling, grappling-hook, golf-swing, natural language processing, cheating] mechanic
 which teaches the player [moral lessons, mathematics, geography, science, history, programming, cooking, random trivia]
 with challenging boss fights
 with a [cooperative, competitive] splitscreen mode
 with an emphasis on [crafting, exploration, alchemy, creativity]
 in which you need to collect [dreams, colours, memories]
 with unlockable achievements
-with lots of [procedurally generated content, character customization options]
+with lots of [procedurally generated content, character customization options, memes, bugs, errors]
 with <a> [online,] leaderboard
 designed with speedrunning in mind
 with destructible terrain
 with a built-in level editor
 with a [funny, moving] story
+with livestream chat integration
+only using sounds coming from <a> [Microsoft Bob, error tones, synthesizer, orchestra, hard drive whirring]
 #end
 `;
